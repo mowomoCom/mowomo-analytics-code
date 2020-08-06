@@ -21,7 +21,13 @@ function mwm_ac_init() {
 add_action('admin_menu', 'mwm_ac_paginas');
 
 function mwm_ac_paginas(){
-    add_menu_page( 'mowomo page', 'Analytics code', 'manage_options', 'mwm-ac', 'mwm_ac_page', plugin_dir_url( __FILE__ ).'/assets/logo-mowomo-white.svg' );
+    if ( empty ( $GLOBALS['admin_page_hooks']['mowomo'] ) ){
+        add_submenu_page( 'mowomo-dashboard', 'Analytics code', 'Analytics code', 'manage_options', 'mwm-analytics-code'); 
+  
+
+    } else{
+        add_menu_page( 'mowomo', 'Analytics code', 'manage_options', 'mwm-ac', 'mwm_ac_page', plugin_dir_url( __FILE__ ).'/assets/logo-mowomo-white.svg' );
+    }
 }
 
 function mwm_ac_page(){
@@ -70,8 +76,10 @@ function mwm_ac_page(){
 function mwm_footer_admin_personalizado( $footer_text ) {
 
     if ( isset($_GET['page']) && $_GET['page'] == "mwm-ac" ) { // Don't forget to add a check for your plugin's page here
-        $footer_text = __( 'Thanks for using mowomo Analytics code, plugin made by <a href="https://mowomo.com" target="_blank" rel="nofollow">mowomo team</a>.' );
+        $footer_text = __( 'Thanks for using mowomo Analytics code, plugin made by <a href="https://mowomo.com" target="_blank" rel="nofollow">mowomo</a>.' );
     }
     return $footer_text;
 }
     add_filter( 'admin_footer_text', 'mwm_footer_admin_personalizado' );
+
+

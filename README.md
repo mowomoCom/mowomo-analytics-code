@@ -2,7 +2,7 @@
 Contributors: mowomo, pacomarchante, victorsaenztm, pablomiralles, mercedes-blogalizate, blogalizate
 Tags: Analytics, Google Analytics Code, Analytics Code, User ID analytics
 Requires at least: 4.6
-Tested up to: 5.2.2
+Tested up to: 5.4
 Stable tag: 1.0.4
 Requires PHP: 5.2.4
 License: GPLv2 or later
