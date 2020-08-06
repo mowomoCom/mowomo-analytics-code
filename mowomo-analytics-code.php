@@ -25,7 +25,7 @@ require_once MWMAC_PLUGIN_DIR . '/configuracion.php'; */
 
 // Constants
 if ( !defined( 'ABSPATH' ) )    exit;
-if ( !defined( 'mwm_ana_NAME' ) )  define( 'mwm_ana_NAME', 'mowomo Mantenimiento' );
+if ( !defined( 'mwm_ana_NAME' ) )  define( 'mwm_ana_NAME', 'mowomo Analytics code' );
 if ( !defined( 'mwm_ana_SLUG' ) )  define( 'mwm_ana_SLUG', 'mwm_ana' );
 if ( !defined( 'mwm_ana_VER' ) )   define( 'mwm_ana_VER', '1.0.0' );
 if ( !defined( 'mwm_ana_TD' ) )    define( 'mwm_ana_TD', mwm_ana_SLUG . '_textdomain' );
